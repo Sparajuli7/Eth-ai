@@ -2,16 +2,16 @@ import { Mail, MessageSquare, Users, Building } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="w-full py-32 px-10 border-t border-primary/20">
+    <section id="waitlist" className="w-full py-32 px-10 border-t border-primary/20">
       <div className="max-w-content mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left side - Info */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get in Touch
+              Join the Waitlist
             </h2>
             <p className="text-xl text-text-gray mb-8 leading-relaxed">
-              Have questions about AI governance? Want to discuss your specific use case? We're here to help.
+              Sign up for early access or reach out with questions. We'll get back to you within 24 hours.
             </p>
             
             <div className="space-y-6">
@@ -22,10 +22,10 @@ const Contact = () => {
                 <div>
                   <div className="text-sm text-text-gray mb-1">Email us directly</div>
                   <a 
-                    href="mailto:hello@aigovernance.dev" 
+                    href="mailto:hello@eth-ai.dev" 
                     className="text-lg text-white hover:text-accent-teal transition-colors"
                   >
-                    hello@aigovernance.dev
+                    hello@eth-ai.dev
                   </a>
                 </div>
               </div>
@@ -60,41 +60,12 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right side - Google Form Placeholder */}
-          <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-primary/30 hover:border-primary/40 transition-all duration-300">
-            {/* Placeholder until you add your Google Form */}
-            <div className="text-center py-16">
-              <MessageSquare className="w-16 h-16 text-primary-light mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Contact Form Coming Soon</h3>
-              <p className="text-text-gray mb-6 leading-relaxed">
-                We're setting up our contact form. In the meantime, feel free to reach out directly via email.
-              </p>
-              <a 
-                href="mailto:hello@aigovernance.dev"
-                className="inline-block px-8 py-4 bg-accent-teal hover:bg-accent-teal/90 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent-teal/50"
-              >
-                Email Us Now
-              </a>
-              
-              <div className="mt-8 pt-8 border-t border-primary/20">
-                <p className="text-sm text-text-gray">
-                  To add your Google Form:
-                </p>
-                <ol className="text-sm text-text-gray-dark mt-2 text-left max-w-md mx-auto space-y-2">
-                  <li>1. Create your form at forms.google.com</li>
-                  <li>2. Click Send → Click &lt;&gt; icon</li>
-                  <li>3. Copy the iframe URL</li>
-                  <li>4. Replace "YOUR_GOOGLE_FORM_EMBED_URL" in Contact.tsx</li>
-                </ol>
-              </div>
-            </div>
-            
-            {/* Uncomment this when you have your Google Form URL */}
-            {/* 
+          {/* Right side - Embedded Google Form (Shorter) */}
+          <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-1 border border-primary/30 hover:border-primary/40 transition-all duration-300">
             <iframe 
-              src="YOUR_GOOGLE_FORM_EMBED_URL" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdu_8uy-AFC05q1ZXe0wllywAd5LxAHO6ZQMTtpZ46inW3cUw/viewform?embedded=true" 
               width="100%" 
-              height="800" 
+              height="700" 
               frameBorder={0}
               marginHeight={0}
               marginWidth={0}
@@ -103,7 +74,6 @@ const Contact = () => {
             >
               Loading form…
             </iframe>
-            */}
           </div>
         </div>
       </div>

@@ -1,34 +1,6 @@
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Building2, AlertTriangle, Shield, CheckCircle, Sparkles } from 'lucide-react';
 
 const Vision = () => {
-  const steps = [
-    {
-      number: '01',
-      title: 'Connect GitHub',
-      description: 'OAuth login in seconds. No installation required.',
-    },
-    {
-      number: '02',
-      title: 'Auto-Scan Repos',
-      description: 'Discover every AI model, API call, and integration.',
-    },
-    {
-      number: '03',
-      title: 'Flag Risks',
-      description: 'Detect unapproved models, PII leaks, and vulnerabilities.',
-    },
-    {
-      number: '04',
-      title: 'Auto-Fix PRs',
-      description: 'One-click pull requests with code fixes and explanations.',
-    },
-    {
-      number: '05',
-      title: 'Generate Evidence',
-      description: 'AI-BOM + compliance PDFs ready for audits in 10 minutes.',
-    },
-  ];
-
   return (
     <section className="w-full py-32 px-10 bg-gradient-to-b from-background to-background/50">
       <div className="max-w-content mx-auto">
@@ -38,64 +10,107 @@ const Vision = () => {
             How It Works
           </h2>
           <p className="text-xl text-text-gray max-w-3xl mx-auto">
-            From code discovery to audit-ready evidence in 5 simple steps
+            Your business uses AI. We make sure it's secure.
           </p>
         </div>
 
-        {/* Desktop: Horizontal flow */}
-        <div className="hidden lg:flex items-start justify-between gap-4 max-w-6xl mx-auto">
-          {steps.map((step, index) => (
-            <div key={index} className="flex items-start gap-4 flex-1">
-              <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-6 border border-accent-teal/20 hover:border-accent-teal/40 transition-all duration-300 hover:-translate-y-1 w-full">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="text-4xl font-bold text-accent-teal/40">
-                    {step.number}
-                  </div>
-                  <CheckCircle2 className="w-5 h-5 text-accent-teal" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-text-gray text-sm leading-relaxed">
-                  {step.description}
-                </p>
+        {/* Flow Diagram */}
+        <div className="max-w-5xl mx-auto">
+          {/* Desktop: Horizontal Flow */}
+          <div className="hidden lg:flex items-center justify-between gap-6">
+            {/* 1. Business + AI */}
+            <div className="flex-1">
+              <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 text-center">
+                <Building2 className="w-12 h-12 text-primary-light mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Your Business</h3>
+                <p className="text-text-gray text-sm">Uses AI models in production code</p>
               </div>
-              
-              {/* Arrow between steps (except last one) */}
-              {index < steps.length - 1 && (
-                <ArrowRight className="w-8 h-8 text-accent-teal/50 flex-shrink-0 mt-8" />
-              )}
             </div>
-          ))}
-        </div>
 
-        {/* Mobile/Tablet: Vertical stack */}
-        <div className="lg:hidden space-y-6 max-w-2xl mx-auto">
-          {steps.map((step, index) => (
-            <div key={index}>
-              <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-6 border border-accent-teal/20 hover:border-accent-teal/40 transition-all duration-300">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="text-5xl font-bold text-accent-teal/40">
-                    {step.number}
-                  </div>
-                  <CheckCircle2 className="w-6 h-6 text-accent-teal" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-text-gray leading-relaxed">
-                  {step.description}
-                </p>
+            <ArrowRight className="w-10 h-10 text-accent-teal/50 flex-shrink-0" />
+
+            {/* 2. Risks Appear */}
+            <div className="flex-1">
+              <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-accent-gold/20 hover:border-accent-gold/40 transition-all duration-300 text-center">
+                <AlertTriangle className="w-12 h-12 text-accent-gold mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Risks Emerge</h3>
+                <p className="text-text-gray text-sm">Security vulnerabilities, compliance gaps, unapproved models</p>
               </div>
-              
-              {/* Down arrow for mobile (except last one) */}
-              {index < steps.length - 1 && (
-                <div className="flex justify-center py-4">
-                  <ArrowRight className="w-8 h-8 text-accent-teal/50 rotate-90" />
-                </div>
-              )}
             </div>
-          ))}
+
+            <ArrowRight className="w-10 h-10 text-accent-teal/50 flex-shrink-0" />
+
+            {/* 3. Eth-AI Detects */}
+            <div className="flex-1">
+              <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-accent-teal/20 hover:border-accent-teal/40 transition-all duration-300 text-center">
+                <Shield className="w-12 h-12 text-accent-teal mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Eth-AI Detects</h3>
+                <p className="text-text-gray text-sm">Scans repos, flags issues, generates fixes</p>
+              </div>
+            </div>
+
+            <ArrowRight className="w-10 h-10 text-accent-teal/50 flex-shrink-0" />
+
+            {/* 4. Secure Business */}
+            <div className="flex-1">
+              <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 text-center">
+                <CheckCircle className="w-12 h-12 text-primary-light mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-2">Secure & Compliant</h3>
+                <p className="text-text-gray text-sm">Auto-fixed code, audit evidence, peace of mind</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: Vertical Stack */}
+          <div className="lg:hidden space-y-6">
+            {/* 1. Business + AI */}
+            <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-primary/20 text-center">
+              <Building2 className="w-12 h-12 text-primary-light mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Your Business</h3>
+              <p className="text-text-gray">Uses AI models in production code</p>
+            </div>
+
+            <div className="flex justify-center">
+              <ArrowRight className="w-10 h-10 text-accent-teal/50 rotate-90" />
+            </div>
+
+            {/* 2. Risks Appear */}
+            <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-accent-gold/20 text-center">
+              <AlertTriangle className="w-12 h-12 text-accent-gold mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Risks Emerge</h3>
+              <p className="text-text-gray">Security vulnerabilities, compliance gaps, unapproved models</p>
+            </div>
+
+            <div className="flex justify-center">
+              <ArrowRight className="w-10 h-10 text-accent-teal/50 rotate-90" />
+            </div>
+
+            {/* 3. Eth-AI Detects */}
+            <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-accent-teal/20 text-center">
+              <Shield className="w-12 h-12 text-accent-teal mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Eth-AI Detects</h3>
+              <p className="text-text-gray">Scans repos, flags issues, generates fixes</p>
+            </div>
+
+            <div className="flex justify-center">
+              <ArrowRight className="w-10 h-10 text-accent-teal/50 rotate-90" />
+            </div>
+
+            {/* 4. Secure Business */}
+            <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-primary/20 text-center">
+              <CheckCircle className="w-12 h-12 text-primary-light mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Secure & Compliant</h3>
+              <p className="text-text-gray">Auto-fixed code, audit evidence, peace of mind</p>
+            </div>
+          </div>
+
+          {/* Bottom highlight */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-accent-teal/30 bg-accent-teal/10">
+              <Sparkles className="w-5 h-5 text-accent-teal" />
+              <span className="text-accent-teal font-semibold">All automated, GitHub-native, zero infrastructure</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

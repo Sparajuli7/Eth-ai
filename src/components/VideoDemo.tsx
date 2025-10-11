@@ -7,7 +7,7 @@ const VideoDemo = () => {
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-              title="AI Governance Demo"
+              title="Eth-AI Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />

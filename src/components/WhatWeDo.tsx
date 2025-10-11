@@ -14,8 +14,8 @@ const WhatWeDo = () => {
     },
     {
       icon: BarChart3,
-      title: 'Generate AI-BOM',
-      description: 'Create a comprehensive AI Bill of Materials documenting every model, version, and dependency in your system.',
+      title: 'Generate AI Model Inventory',
+      description: 'Create a comprehensive inventory documenting every AI model, version, and dependency in your system.',
     },
     {
       icon: FileText,
