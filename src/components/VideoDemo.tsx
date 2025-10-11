@@ -6,7 +6,7 @@ const VideoDemo = () => {
           <div className="aspect-video w-full">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              src="https://www.youtube.com/embed/DCZ1wSGanwo"
               title="Eth-AI Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
