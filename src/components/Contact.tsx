@@ -60,8 +60,37 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right side - Embedded Google Form */}
-          <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-1 border border-primary/30 hover:border-primary/40 transition-all duration-300">
+          {/* Right side - Google Form Placeholder */}
+          <div className="glass-card bg-[rgba(15,20,25,0.7)] rounded-xl p-8 border border-primary/30 hover:border-primary/40 transition-all duration-300">
+            {/* Placeholder until you add your Google Form */}
+            <div className="text-center py-16">
+              <MessageSquare className="w-16 h-16 text-primary-light mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Contact Form Coming Soon</h3>
+              <p className="text-text-gray mb-6 leading-relaxed">
+                We're setting up our contact form. In the meantime, feel free to reach out directly via email.
+              </p>
+              <a 
+                href="mailto:hello@aigovernance.dev"
+                className="inline-block px-8 py-4 bg-accent-teal hover:bg-accent-teal/90 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent-teal/50"
+              >
+                Email Us Now
+              </a>
+              
+              <div className="mt-8 pt-8 border-t border-primary/20">
+                <p className="text-sm text-text-gray">
+                  To add your Google Form:
+                </p>
+                <ol className="text-sm text-text-gray-dark mt-2 text-left max-w-md mx-auto space-y-2">
+                  <li>1. Create your form at forms.google.com</li>
+                  <li>2. Click Send → Click &lt;&gt; icon</li>
+                  <li>3. Copy the iframe URL</li>
+                  <li>4. Replace "YOUR_GOOGLE_FORM_EMBED_URL" in Contact.tsx</li>
+                </ol>
+              </div>
+            </div>
+            
+            {/* Uncomment this when you have your Google Form URL */}
+            {/* 
             <iframe 
               src="YOUR_GOOGLE_FORM_EMBED_URL" 
               width="100%" 
@@ -74,21 +103,7 @@ const Contact = () => {
             >
               Loading form…
             </iframe>
-            
-            {/* Fallback if iframe doesn't load */}
-            <div className="p-8 text-center hidden">
-              <p className="text-text-gray mb-4">
-                Form not loading? 
-              </p>
-              <a 
-                href="YOUR_GOOGLE_FORM_URL" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-accent-teal hover:text-accent-teal/80 font-semibold"
-              >
-                Open form in new tab →
-              </a>
-            </div>
+            */}
           </div>
         </div>
       </div>
